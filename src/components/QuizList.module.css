@@ -1,0 +1,21 @@
+.quizList {
+  margin-top: 25px;
+}
+
+.quizListItem {
+  width: 100%;
+  font-size: 17px;
+  padding: 10px 10px 12px 15px;
+  cursor: pointer;
+	border: 1px solid #8f8f8f;
+	border-radius: 10px;
+	transition: all .3s ease;
+}
+
+.quizListItem + .quizListItem {
+  margin-top: 15px;
+}
+
+.quizListItem:hover {
+  border-color: #68ff4a;
+}
