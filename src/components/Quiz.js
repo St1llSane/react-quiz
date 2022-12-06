@@ -11,11 +11,12 @@ function Quiz() {
 
   return (
     <div className={styles.quiz}>
-      {step !== questions.length ? (
-        <>
-          <div className={styles.progressBar}>
-            <div style={{ marginLeft: `${progressBar}%` }}></div>
-          </div>
+      <div className={styles.progressBar}>
+        <div
+          className={styles.progressBarHide}
+          style={{ bottom: `${progressBar}%` }}
+        ></div>
+        {step !== questions.length ? (
           <div className={styles.quizBody}>
             <h2 className={styles.quizTitle}>{questions[step].title}</h2>
             <QuizList
@@ -26,10 +27,10 @@ function Quiz() {
               setCorrect={setCorrect}
             />
           </div>
-        </>
-      ) : (
-        <QuizFinal correct={correct} />
-      )}
+        ) : (
+          <QuizFinal correct={correct} />
+        )}
+      </div>
     </div>
   )
 }
